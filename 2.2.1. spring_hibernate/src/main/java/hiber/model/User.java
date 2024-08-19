@@ -58,4 +58,23 @@ public class User {
    public void setEmail(String email) {
       this.email = email;
    }
+
+   @OneToOne (cascade = CascadeType.ALL)
+   @JoinColumn (name = "car_Id")
+   private Car car;
+
+   public Car setCar(Car car) {
+      this.car = car;
+      return car;
+   }
+
+   @Override
+   public String toString () {
+      return "User - name: " + firstName + ", last name: " + lastName + ", e-mail: " + email + ". ";
+   }
+
+   public Car getCar() {
+      return car;
+   }
 }
+
