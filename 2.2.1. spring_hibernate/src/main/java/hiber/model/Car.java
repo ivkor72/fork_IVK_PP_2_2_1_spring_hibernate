@@ -26,6 +26,10 @@ public class Car {
     @OneToOne
     private User user;
 
+    public Car (User user){
+        this.user = user;
+    }
+
     public Long getId() {
         return id;
     }

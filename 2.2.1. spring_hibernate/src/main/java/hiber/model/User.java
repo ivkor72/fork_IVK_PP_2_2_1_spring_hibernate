@@ -63,9 +63,8 @@ public class User {
    @JoinColumn (name = "car_Id")
    private Car car;
 
-   public Car setCar(Car car) {
+   public User (Car car) {
       this.car = car;
-      return car;
    }
 
    @Override
@@ -74,6 +73,11 @@ public class User {
    }
 
    public Car getCar() {
+      return car;
+   }
+
+   public Car setCar(Car car) {
+      this.car = car;
       return car;
    }
 }
